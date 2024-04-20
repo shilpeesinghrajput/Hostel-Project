@@ -57,3 +57,18 @@
   font-weight: 800;
   font-style: italic;
 }
+
+@keyframes swipeUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.swipe-up {
+  animation: swipeUp 0.5s ease-out forwards;
+}

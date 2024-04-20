@@ -1,47 +1,78 @@
+import Heading from "../Heading/Heading";
+import Buttons from "../button/Button"
+
 // ContactForm.jsx
 const ContactForm = () => {
+
+
+  const handleButtonClick = () => {
+
+  };
   return (
-    <div className="bg-gradient-to-b from-white to-gray-200 p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-      <form>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-gray-700">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="w-full p-2 border border-gray-300 rounded"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="message" className="block text-gray-700">
-            Message
-          </label>
-          <textarea
-            id="message"
-            rows="4"
-            className="w-full p-2 border border-gray-300 rounded"
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-orange-500 text-white p-3 rounded hover:bg-orange-600"
-        >
-          Send Message
-        </button>
-      </form>
+    <>
+
+<Heading
+        header={"Contact us"}
+        title={"SEND US A MESSAGE"}
+        classname="mb-[1rem] mt-[7rem]"
+      />
+    <div className="flex items-center justify-center p-12">
+     
+      <div  className="mx-auto w-full max-w-[550px]">
+        <form action="https://formbold.com/s/FORM_ID" method="POST">
+          <div  className="mb-5">
+            <label
+              for="name"
+               className="mb-3 block text-base font-medium text-[#07074D]"
+            >
+              Full Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+               className="w-full rounded-md border border-[#f7f5f2] bg-[#f7f5f2] py-5 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+          </div>
+          <div  className="mb-5">
+            <label
+              for="email"
+               className="mb-3 block text-base font-medium text-[#07074D]"
+            >
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@domain.com"
+               className="w-full rounded-md border border-[#f7f5f2] bg-[#f7f5f2] py-5 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+          </div>
+    
+          <div  className="mb-5">
+            <label
+              for="message"
+               className="mb-3 block text-base font-medium text-[#07074D]"
+            >
+              Message
+            </label>
+            <textarea
+              rows="4"
+              name="message"
+              id="message"
+              placeholder="Type your message"
+               className="w-full resize-none rounded-md border border-[#f7f5f2] bg-[#f7f5f2] py-6 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            ></textarea>
+          </div>
+          <div>
+          <Buttons onClick={handleButtonClick}>SEND MESSAGE</Buttons>
+          </div>
+        </form>
+      </div>
     </div>
+    </>
   );
 };
 

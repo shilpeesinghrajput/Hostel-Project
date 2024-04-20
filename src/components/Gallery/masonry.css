@@ -1,0 +1,76 @@
+.masonry {
+    column-count: 3;
+    column-gap: 1em;
+  }
+  
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1em;
+    position: relative;
+  }
+  
+  .masonry-item img {
+    width: 100%;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay .search-icon {
+    color: white;
+    font-size: 2em;
+    visibility: hidden;
+  }
+  
+  .masonry-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .masonry-item:hover .overlay .search-icon {
+    visibility: visible;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s;
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 80%;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

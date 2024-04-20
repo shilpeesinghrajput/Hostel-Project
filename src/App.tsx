@@ -10,9 +10,10 @@ import ContactForm from './components/Contactform/ContactForm';
 import Footer from './components/Footer/Footer';
 import Carousel from "./components/carousel/carousel"
 import CarouselWithMultipleCards from './components/card/CardCarousel';
-import Heading from './components/Heading/Heading';
 import Staffs from "./components/staff/Staff"
 import IconRow from './components/icons/Icons';
+import CarouselGuest from './components/guest/Guest';
+import MasonryOpus from './components/Gallery/masonry';
 
 
 
@@ -103,6 +104,37 @@ const cardCarousel=[
 
 ]
 
+
+const images = [
+  { url: 'https://picsum.photos/320/220', alt: 'Image 1' },
+  { url: 'https://picsum.photos/400/200', alt: 'Image 2' },
+  { url: 'https://picsum.photos/300/240', alt: 'Image 3' },
+  { url: 'https://picsum.photos/300/240', alt: 'Image 4' },
+  { url: 'https://picsum.photos/350/300', alt: 'Image 5' },
+  { url: 'https://picsum.photos/150/240', alt: 'Image 6' },
+  { url: 'https://picsum.photos/150/260', alt: 'Image 7' },
+  { url: 'https://picsum.photos/130/240', alt: 'Image 8' },
+  { url: 'https://picsum.photos/200/240', alt: 'Image 9' },
+
+  // Add more images as needed
+];
+
+const items = [
+  {
+    image:'https://picsum.photos/400/200',
+    alt: 'Image 1',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    image: 'https://picsum.photos/400/200',
+    alt: 'Image 2',
+    text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  // Add more items as needed
+];
+
+
+
 const App = () => {
   return (
     <div className="App">
@@ -115,6 +147,14 @@ const App = () => {
       <section className="contact-section">
         <Staffs imageUrls={imageUrls} />;
         <IconRow />
+       
+        <div className="container mx-auto my-8">
+        <MasonryOpus images={images} />
+
+      </div>
+      
+
+      <CarouselGuest items={items} />
         <ContactForm />
       </section>
       <Footer />

@@ -16,7 +16,7 @@ const IconRow = () => {
 
   return (
 <>
-<Heading header={"Facilities"} title={"WHAT WE OFFER FOR FREE"} classname="mb-[8rem] mt-[7rem]" />
+<Heading header={"Facilities"} title={"WHAT WE OFFER FOR FREE"} classname="mb-[4rem] mt-[7rem]" />
 
      <div className="flex flex-row justify-center">
      <div className="grid grid-cols-6  w-[80%]">
