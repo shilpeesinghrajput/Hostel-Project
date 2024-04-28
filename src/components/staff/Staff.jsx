@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Heading from "../Heading/Heading";
 import Buttons from "../button/Button"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./staff.scss"
  // Import social media icons from Font Awesome
 import {
   FaFacebook,
@@ -23,12 +24,12 @@ const Staff = ({ imageUrls }) => {
       <Heading
         header={"Our Staff"}
         title={"MEET THE TEAM"}
-        classname="mb-[4rem] mt-[7rem]"
+        classname="mb-[4rem] mt-[4rem]"
       />
 
       <div className="flex justify-center">
         <div className="w-[70%]">
-          <div className="grid grid-cols-4">
+          <div className="grid-container">
             {imageUrls.map((url, index) => (
               <div className="flex flex-col items-center">
                 <div

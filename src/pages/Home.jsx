@@ -137,8 +137,10 @@ const items = [
 const Home = () => {
   return (
     <div>
+      <div>
     <Carousel slides={slides} />
-    <Heading header={"Rooms"} title={"MORE ACCOMMODATIONS"} className="mb-[3rem]" />
+    </div>
+    <Heading header={"Rooms"} title={"MORE ACCOMMODATIONS"} classname="mb-[3rem] mt-[150px]" />
     <CarouselWithMultipleCards products={cardCarousel}/>
 
     <section className="contact-section">

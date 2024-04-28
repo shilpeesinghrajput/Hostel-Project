@@ -3,3 +3,9 @@
         color:white
     
 }
+
+.grid-icons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        grid-gap: 40px;
+      }

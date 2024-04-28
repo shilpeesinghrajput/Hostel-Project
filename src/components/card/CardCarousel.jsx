@@ -13,7 +13,7 @@ const CarouselWithMultipleCards = ({ products }) => {
       if (sliderRef.current) {
         sliderRef.current.slickNext();
       }
-    }, 3000); // Change slide every 2 seconds
+    }, 3000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -22,30 +22,32 @@ const CarouselWithMultipleCards = ({ products }) => {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToShow: 3, // Initial slides to show
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768, // Adjust breakpoint as needed
+        settings: {
+          slidesToShow: 1 // Show only one slide on mobile screens
+        }
+      }
+    ]
   };
 
   return (
-    <>
-      
-<div className="mt-[10rem]">
-<Heading header={"Rooms"} title={"MORE ACCOMMODATIONS"} className="mb-[3rem]" />
-      <div className="flex flex-row justify-center items-center">
-
-        <div className="budhu_shilpee w-[80%] chup_budbak ">
-          <Slider ref={sliderRef} {...settings} className='mt-16'>
+    <div className="mt-10">
+      <div className="flex justify-center items-center">
+        <div className="w-full md:w-4/5">
+          <Slider ref={sliderRef} {...settings} className="mt-16">
             {products.map((product, index) => (
-            <div  key={product.id} >
-                <CardGrid product={product}
-                 />
+              <div key={product.id}>
+                <CardGrid product={product} />
               </div>
             ))}
           </Slider>
         </div>
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 

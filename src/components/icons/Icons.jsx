@@ -26,10 +26,10 @@ const IconRow = () => {
 
   return (
 <>
-<Heading header={"Facilities"} title={"WHAT WE OFFER FOR FREE"} classname="mb-[4rem] mt-[7rem]" />
+<Heading header={"Facilities"} title={"WHAT WE OFFER FOR FREE"} classname="mb-[4rem] mt-[4rem]" />
 
 <div className="flex flex-row justify-center">
-        <div className="grid grid-cols-6 w-[80%]">
+        <div className="grid-icons w-[80%] ">
         {icons.map((icon, index) => (
            <div className="flex flex-col items-center cursor-pointer">
         <div className="parent bg-[#ffdb74] p-2 rounded-full transition-colors duration-300 hover:bg-[#444349] hover:text-white  w-[120px] h-[120px] flex flex-row justify-center  items-center"
