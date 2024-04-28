@@ -19,7 +19,7 @@ const imageUrls = [
   "https://picsum.photos/220",
   // Add more image URLs as needed
 ];
-const Appoinment = ({bookings}) => {
+const Appoinment = () => {
 
     const [currentMonth, setCurrentMonth] = useState(new Date());
 
@@ -37,7 +37,7 @@ const Appoinment = ({bookings}) => {
     };
   
     const isBooked = (date) => {
-      return bookings?.some(booking => isSameDay(date, booking));
+      return []?.some(booking => isSameDay(date, booking));
     };
 
     const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
