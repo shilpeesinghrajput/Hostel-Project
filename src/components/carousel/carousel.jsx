@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button1 from "../button/Button1"
+import { Link } from 'react-router-dom';
 
 
 
@@ -38,7 +39,7 @@ const HeroCarousel = ({ slides }) => {
               <p className="text-lg sm:text-xl md:text-2xl mb-8 mt-8">
                 {slide.description}
               </p>
-              <Button1 onClick={() => handleButtonClick(slide.ctaUrl)}>{slide.ctaText}</Button1>
+            <Link to="/appoinment"> <Button1 onClick={() => handleButtonClick(slide.ctaUrl)}>{slide.ctaText}</Button1></Link> 
               {/* <a
                 href={slide.ctaUrl}
                 className="inline-block bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300"

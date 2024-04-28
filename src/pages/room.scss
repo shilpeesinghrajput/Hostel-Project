@@ -1,0 +1,9 @@
+ul.room_list{
+    list-style: none; /* Remove default bullet points */
+    li:before {
+        content: "✔"; /* Use the ✔ character as a bullet point */
+        margin-right: 10px; /* Add some space between the bullet and the text */
+      }
+  }
+  
+ 

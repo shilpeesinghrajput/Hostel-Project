@@ -13,12 +13,9 @@ const MasonryOpus = ({ images }) => {
     };
   
     return (
-      <div>
-        <Heading
-        header={"Photogallery"}
-        title={"OUR ACCOMODATIONS"}
-        classname="mb-[5rem] mt-[7rem]"
-      />
+      <div className="flex justify-center">
+    
+  
         <div className="masonry">
           {images.map((image, index) => (
             <div key={index} className="masonry-item" onClick={() => handleImageClick(image)}>
@@ -27,8 +24,10 @@ const MasonryOpus = ({ images }) => {
                 <span className="search-icon">🔍</span>
               </div>
             </div>
+            
           ))}
         </div>
+       
   
         {modalImage && (
           <div className="modal" onClick={handleCloseModal}>

@@ -1,56 +1,73 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Heading from '../Heading/Heading';
 
-const Carousel = ({ items }) => {
-  const [currentItem, setCurrentItem] = useState(0);
+// Sample images
 
-  const goToNext = () => {
-    setCurrentItem((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+const Guest = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1, // Display only one slide at a time
+    slidesToScroll: 1,
+    centerMode: true,
+    autoplay: true, // <--- Add this prop
+  autoplaySpeed: 2000,
+  nextArrow: <div />, // <--- Pass an empty component to hide the next arrow
+  prevArrow: <div />,
+  pauseOnHover: true, // <--- Pause autoplay on hover
+  pauseOnFocus: true,
   };
 
-  const goToPrev = () => {
-    setCurrentItem((prev) => (prev === 0 ? items.length - 1 : prev - 1));
-  };
+const [guests, setGuests] = React.useState([
+    {
+      title: "DAVID",
+      description: "I’ve always enjoyed working with you guysYou have talented people who obviously enjoy what they do and who they do it fo Time and time again, I want to thank you and say how awesome it was for a stay!",
+      imageUrl: "https://picsum.photos/200"
+    },
+    {
+      title: "DAVID",
+      description: "I’ve always enjoyed working with you guysYou have talented people who obviously enjoy what they do and who they do it fo Time and time again, I want to thank you and say how awesome it was for a stay!",
+      imageUrl: "https://picsum.photos/200"
+    },
+    {
+      title: "DAVID",
+      description: " \"I’ve always enjoyed working with you guysYou have talented people who obviously enjoy what they do and who they do it fo Time and time again, I want to thank you and say how awesome it was for a stay! \" ",
+      imageUrl: "https://picsum.photos/200 "
+    },
+  ]);
+
 
   return (
     <>
-    <Heading
-    header={"GUESTS SAY"} 
-    title={"WHAT WE OFFER FOR FREE"} 
-    classname="mb-[4rem] mt-[7rem]" />
-
-  
-    <div className="relative">
-      <div className="overflow-hidden">
-        <div className="flex">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`${
-                index === currentItem ? 'block' : 'hidden'
-              } absolute top-0 left-0 w-50%`}
-            >
-              <img src={item.image} alt={item.alt} className="w-50%" />
-              <p className="text-center mt-2">{item.text}</p>
-            </div>
-          ))}
+    <div className='bg-[#f7f5f2]'>
+<Heading
+        header={"Gusets Say"}
+        title={"TESTIMONIALS"}
+        classname="mb-[3rem] pt-10"
+      />
+    <div className="flex justify-center">
+    <div className="w-2/4">
+      <Slider {...settings}>
+        {guests.map((item)=>( 
+        <div className="text-center text-[#928f88]  tracking-[2px] oswald-font">
+        <p className="text-[17px] w-3/4   mx-auto pb-10">{item.description}</p> 
+          <img src={item.imageUrl} alt="Image 3" className="mx-auto w-[90px] h-auto rounded-full" />
+          <div className="mt-4">
+            <h2 className="text-[15px] mb-10 ">{item.title}</h2>
+          
+          </div>
         </div>
-      </div>
-      <button
-        onClick={goToPrev}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 bg-gray-500 text-white rounded-l-md"
-      >
-        Prev
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 bg-gray-500 text-white rounded-r-md"
-      >
-        Next
-      </button>
+        ))}
+      </Slider>
     </div>
+    </div>
+    </div> 
     </>
   );
 };
 
-export default Carousel;
+export default Guest;

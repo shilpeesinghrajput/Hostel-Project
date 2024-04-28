@@ -35,7 +35,7 @@ const items = [
 
 const Footer = () => {
   return (
-    <div className="w-full mt-24 bg-[#3d3c3f] text-gray-300 py-y px-2">
+    <footer className="w-full bg-[#3d3c3f] text-gray-300 py-y px-2">
 
       <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8">
          <div className="col-span-2 pt-8 md:pt-2">
@@ -63,20 +63,20 @@ const Footer = () => {
 
       <div className="flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-[#928f88]">
       <p className="py-4"><a href="https://axiomthemes.com/" target="_blank" rel="noopener noreferrer">AxiomThemes© 2024</a> All rights reserved. <a href="https://axiomthemes.com/terms-of-service/" target="_blank" rel="noopener noreferrer"  className="hover:text-[#fd7444]">Terms of use</a> and <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-[#fd7444]">Privacy Policy</a></p>
-        <div className="flex justify-between sm:w-[300px] pt-4 text-2xl">
+        <div className="flex justify-between sm:w-[300px] pt-4 text-xl">
         {items.map((item, index) => {
             const Icon = item.icon;
             return (
               <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
                 <Icon className={`text-[#444349] focus:outline-none oswald-font 
-                  animate-[swipe-in_0.5s_ease-out]  tracking-widest bg-[#ffdb74] rounded-lg
-                  hover:bg-transparent hover:border border-white hover:text-white h-[30px] w-[30px]`} />
+                  animate-[swipe-in_0.5s_ease-out]  tracking-widest bg-[#ffdb74] rounded-full
+                  hover:bg-transparent hover:border border-white hover:text-white h-[40px] w-[40px]`} />
               </a>
             );
           })}
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

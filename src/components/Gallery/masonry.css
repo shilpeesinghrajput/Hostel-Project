@@ -1,6 +1,9 @@
 .masonry {
     column-count: 3;
     column-gap: 1em;
+    max-width: 80%;
+  
+
   }
   
   .masonry-item {

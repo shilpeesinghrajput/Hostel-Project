@@ -28,9 +28,11 @@ const CarouselWithMultipleCards = ({ products }) => {
 
   return (
     <>
-      <Heading header={"Rooms"} title={"MORE ACCOMMODATIONS"} className="mb-[5rem]" />
-
+      
+<div className="mt-[10rem]">
+<Heading header={"Rooms"} title={"MORE ACCOMMODATIONS"} className="mb-[3rem]" />
       <div className="flex flex-row justify-center items-center">
+
         <div className="budhu_shilpee w-[80%] chup_budbak ">
           <Slider ref={sliderRef} {...settings} className='mt-16'>
             {products.map((product, index) => (
@@ -41,6 +43,7 @@ const CarouselWithMultipleCards = ({ products }) => {
             ))}
           </Slider>
         </div>
+      </div>
       </div>
     </>
   );

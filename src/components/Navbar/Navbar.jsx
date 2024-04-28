@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../assets/logo2x.webp";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation ,faPhone} from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div>
             <span className="text-black font-bold text-[40px]">
+              <Link to={"/"}>
               <img src={Logo} alt="" srcset="" className="w-full min-w-[25%] max-w-[47%]" />
+              </Link>
             </span>
           </div>
           <div className="hidden sm:block">
@@ -82,31 +85,31 @@ const Navbar = () => {
           }`}
         >
           <div className="px-10 pt-10 oswalds pb-6 space-y-6 text-white text-center  text-[43px]">
-            <a href="#" className="block font-[400] tracking-widest
-             text-[35px] pt-10  hover:text-yellow-200 ">
+            <Link to={"/"} className="block font-[400] tracking-widest
+             text-[35px] pt-10  hover:text-yellow-200 " onClick={toggleNavbar}>
               HOME
-            </a>
-            <a href="#" className="block font-[400] tracking-widest
-             text-[35px] hover:text-yellow-200 ">
+            </Link>
+            <Link to={"/about"} className="block font-[400] tracking-widest
+             text-[35px] hover:text-yellow-200" onClick={toggleNavbar}>
               ABOUT
-            </a>
+            </Link>
 
             <a href="#" className="block font-[400] tracking-widest
-             text-[35px] hover:text-yellow-200 ">
+             text-[35px] hover:text-yellow-200" onClick={toggleNavbar}>
               FEATURES
             </a>
 
-            <a href="#" className="block font-[400] tracking-widest
-             text-[35px] hover:text-yellow-200 ">
+            <Link to={'/gallery'} className="block font-[400] tracking-widest
+             text-[35px] hover:text-yellow-200"  onClick={toggleNavbar}>
               GALLERY
-            </a>
+            </Link>
 
             <a href="#" className="block font-[400] tracking-widest
              text-[35px] hover:text-yellow-200 ">
               BLOG
             </a>
 
-            <a href="#" className="block font-[400] tracking-widest
+            <a href={"/rooms"} className="block font-[400] tracking-widest
              text-[35px] hover:text-yellow-200 ">
               ROOMS
             </a>

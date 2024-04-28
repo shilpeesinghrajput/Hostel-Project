@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Buttons from "../button/Button"
+import { Link } from 'react-router-dom';
 
 const CardGrid = ({product}) => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -28,14 +29,14 @@ const CardGrid = ({product}) => {
       </div>
     <div className="p-5 w-[385px] h-[290px] bg-slate-100 text-center">
         <a href="#">
-            <h5 className="mb-2 text-[20px] font-bold tracking-tight text-[#444349]  oswald-font hover:text-[#fd7444] text-center">{product.name}</h5>
+            <h5 className="mb-2 text-[20px] font-bold tracking-[4px] text-[#444349]  oswald-font hover:text-[#fd7444] text-center">{product.name}</h5>
         </a>
-<div className='flex flex-row justify-center gap-1  align-middle' >
+<div className='flex flex-col justify-center align-middle' >
 
-        <div className="mb-3 font-normal text text-gray-r700 dark:text-gray-400 max-w-[28%] items-center text-right">Per night from</div>
-        <div className='text-[50px] font-bold text-[#fd7444]'>{product.price}</div>
+        <div className="text-[15px] font-bold tracking-[2px] text-[#444349] italic hover:text-[#fd7444] text-center">Per night from</div>
+        <div className='text-[50px] font-bold text-[#fd7444] mb-2 text-center oswald-font tracking-[4px]'>{product.price}</div>
         </div>
-       <Buttons onClick={handleButtonClick}>MORE INFO</Buttons>
+      <Link to="/room"><Buttons onClick={handleButtonClick}>MORE INFO</Buttons></Link> 
     </div>
 </div>
 
