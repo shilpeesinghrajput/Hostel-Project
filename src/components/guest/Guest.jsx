@@ -54,7 +54,7 @@ const Guest = () => {
         <Heading
           header={"Guests Say"}
           title={"TESTIMONIALS"}
-          className="mb-12 pt-10"
+          classname="mb-12 pt-[2rem]"
         />
         <div className="flex justify-center">
           <div className="w-full md:w-2/4">

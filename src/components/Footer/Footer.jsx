@@ -1,4 +1,4 @@
-import React from "react";
+
 import Logos from "../../assets/logo1.webp";
 import {
   FaFacebook,
@@ -7,22 +7,33 @@ import {
   FaTwitter,
   FaTwitch,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 const sections = [
   {
     title: "QUICK LINKS",
     items: [
-      "About us", "Gallery", "Rooms", "Contact us"
+      {name: "Home",link:"/"} ,
+    {name: "About us",link:"/about"} ,
+    {name: "Gallery",link:"/gallery"},
+     {name:"Rooms",link:"/rooms"} ,
+     {name:"Room",link:"/room"},
+     
     ],
   },
-  {
-    title: "Company",
-    items: ["About", "Blog", "Jobs", "Press", "Partners"],
-  },
+  // {
+  //   title: "Company",
+  //   items: ["About", "Blog", "Jobs", "Press", "Partners"],
+  // },
   {
     title: "CONTACT INFO",
-    items: ["123, New Lenox Chicago, IL 60606", "123-456-7890", "info@yoursite.com"],
-  },
+items: [
+  {name: "123, New Lenox Chicago, IL 60606", link: ""},
+  {name: "123-456-7890", link: ""},
+  {name: "info@yoursite.com", link: ""},
+],
+  }
 ];
 
 const items = [
@@ -41,7 +52,7 @@ const Footer = () => {
          <div className="col-span-2 pt-8 md:pt-2">
          <div>
             <span className="text-black font-bold text-[40px]">
-              <img src={Logos} alt="" srcset="" className="w-full min-w-[40%] max-w-[60%]" />
+              <img src={Logos} alt=""  className="w-full min-w-[40%] max-w-[60%] mb-8 ml-6" />
             </span>
           </div>
         </div>
@@ -49,11 +60,14 @@ const Footer = () => {
           <div key={index}>
             <h6 className="font-bold uppercase pt-2">{section.title}</h6>
             <ul>
-              {section.items.map((item, i) => (
-                <li key={i} className="py-1 text-[#928f88] hover:text-[#fd7444]">
-                  {item}
+              {section.items.map((item,indexx) => {return (
+                <li key={indexx}  className="py-1 text-[#928f88] hover:text-[#fd7444]">
+                <Link to={item?.link}>{item?.name}</Link>
                 </li>
-              ))}
+              )}
+            
+            )
+              }
             </ul>
           </div>
         ))}

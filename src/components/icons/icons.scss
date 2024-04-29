@@ -6,6 +6,15 @@
 
 .grid-icons {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-gap: 40px;
+      }
+
+
+      @media screen and (max-width: 480px) {
+        .grid-icons {
+
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+               
+              }
       }

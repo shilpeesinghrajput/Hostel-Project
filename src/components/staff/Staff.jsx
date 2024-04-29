@@ -45,7 +45,7 @@ const Staff = ({ imageUrls }) => {
                   />
                   {hoveredIndex === index && (
                     <div
-                      className="absolute inset-0 flex justify-center items-center rounded-full"
+                      className="social-info absolute inset-0 flex justify-center items-center rounded-full"
                       style={{
                         backgroundColor: "rgba(0, 0, 0, 0.5)",
                         width: "220px",

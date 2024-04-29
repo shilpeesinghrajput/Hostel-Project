@@ -31,7 +31,7 @@ const IconRow = () => {
 <div className="flex flex-row justify-center">
         <div className="grid-icons w-[80%] ">
         {icons.map((icon, index) => (
-           <div className="flex flex-col items-center cursor-pointer">
+           <div key={index} className="flex flex-col items-center cursor-pointer">
         <div className="parent bg-[#ffdb74] p-2 rounded-full transition-colors duration-300 hover:bg-[#444349] hover:text-white  w-[120px] h-[120px] flex flex-row justify-center  items-center"
               >
             

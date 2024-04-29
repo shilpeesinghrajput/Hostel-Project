@@ -18,7 +18,7 @@ const Navbar = () => {
           <div>
             <span className="text-black font-bold text-[40px]">
               <Link to={"/"}>
-              <img src={Logo} alt="" srcset="" className="w-full min-w-[25%] max-w-[47%]" />
+              <img src={Logo} alt="" className="w-full min-w-[25%] max-w-[47%]" />
               </Link>
             </span>
           </div>
@@ -109,10 +109,10 @@ const Navbar = () => {
               BLOG
             </a>
 
-            <a href={"/rooms"} className="block font-[400] tracking-widest
-             text-[35px] hover:text-yellow-200 ">
+            <Link to={"/rooms"} className="block font-[400] tracking-widest
+             text-[35px] hover:text-yellow-200"  onClick={toggleNavbar}>
               ROOMS
-            </a>
+           </Link>
             {/* Add more links as needed */}
           </div>
         </div>
