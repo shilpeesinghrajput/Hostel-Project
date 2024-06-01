@@ -85,7 +85,7 @@ const Navbar = () => {
           }`}
         >
           <div className="px-10 pt-10 oswalds pb-6 space-y-6 text-white text-center  text-[43px]">
-            <Link to={"/"} className="block font-[400] tracking-widest
+            <Link to={"/login"} className="block font-[400] tracking-widest
              text-[35px] pt-10  hover:text-yellow-200 " onClick={toggleNavbar}>
               HOME
             </Link>

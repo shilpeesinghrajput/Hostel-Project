@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo2x.webp'
 const Login = () => {
     return ( 
@@ -36,12 +37,12 @@ const Login = () => {
           type="password"
         />
       </div>
-      <button
+      <Link
             className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-md"
             type="submit"
-          >
+            to={"/admindashboard"}>
             Sign In
-          </button>
+          </Link>
     </form>
   </div>
 </div>
