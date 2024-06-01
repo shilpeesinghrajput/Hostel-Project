@@ -23,11 +23,11 @@ function App() {
           {/* Add more routes here */}
           <Route path="appoinment"  element={<Appoinment/>} />
        
-          <Route  path="login"  element={<Login/>}></Route>
-        <Route  path="admindashboard"  element={<AdminDashBoard/>}></Route>
 
         </Route>
-       
+        <Route  path="login"  element={<Login/>}></Route>
+        <Route  path="admindashboard"  element={<AdminDashBoard/>}></Route>
+
       </Routes>
 
       
