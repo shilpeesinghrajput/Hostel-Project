@@ -6,6 +6,8 @@ import Gallery from "./pages/Gallery";
 import Rooms from "./pages/Rooms";
 import Room from "./pages/Room";
 import Appoinment from "./pages/Appoinment"
+import Login from "./pages/Login";
+import AdminDashBoard from "./pages/adminDashboard";
 
 
 function App() {
@@ -20,8 +22,15 @@ function App() {
           <Route path="room"  element={<Room/>} />
           {/* Add more routes here */}
           <Route path="appoinment"  element={<Appoinment/>} />
+       
+          
         </Route>
+        <Route  path="login"  element={<Login/>}></Route>
+        <Route  path="admindashboard"  element={<AdminDashBoard/>}></Route>
+
       </Routes>
+
+      
     </BrowserRouter>
   );
 }
